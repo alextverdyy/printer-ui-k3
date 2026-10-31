@@ -309,6 +309,8 @@ cat <<EOF | sudo tee "${ENV_FILE}" >/dev/null
 PRINTER_UI_HOST=${HOST}
 PRINTER_UI_PORT=${PORT}
 PRINTER_UI_DIST=${INSTALL_DIR}/dist
+PRINTER_UI_SOURCE_DIR=${REPO_DIR}
+PRINTER_UI_UPDATE_SCRIPT=${REPO_DIR}/scripts/update-printer-ui.sh
 EOF
 
 cat <<EOF | sudo tee "${SERVICE_FILE}" >/dev/null

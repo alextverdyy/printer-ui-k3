@@ -105,6 +105,19 @@ sudo systemctl restart printer-ui.service
 sudo systemctl restart printer-ui-kiosk.service
 ```
 
+### Update button source path
+The in-app **Update Screen** action runs `scripts/update-printer-ui.sh` from the path set in `/etc/default/printer-ui`.
+
+Ensure this points to your real git clone (not `/opt/printer-ui`):
+
+```bash
+sudo sed -i 's|^PRINTER_UI_SOURCE_DIR=.*|PRINTER_UI_SOURCE_DIR=/home/pi/printer_ui|' /etc/default/printer-ui
+sudo sed -i 's|^PRINTER_UI_UPDATE_SCRIPT=.*|PRINTER_UI_UPDATE_SCRIPT=/home/pi/printer_ui/scripts/update-printer-ui.sh|' /etc/default/printer-ui
+sudo systemctl restart printer-ui.service
+```
+
+If those keys are missing, re-run `./scripts/install-printer-ui.sh` from your cloned repo once.
+
 ### Lockfile note (`npm ci`)
 - Do not delete `package-lock.json`.
 - If `npm ci` reports lockfile drift, run:

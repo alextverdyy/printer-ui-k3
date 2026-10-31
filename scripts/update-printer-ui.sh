@@ -6,7 +6,8 @@ if [[ "${EUID}" -eq 0 ]]; then
   exit 1
 fi
 
-REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+DEFAULT_REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+REPO_DIR="${PRINTER_UI_SOURCE_DIR:-${DEFAULT_REPO_DIR}}"
 INSTALL_DIR="/opt/printer-ui"
 
 npm_is_healthy() {
@@ -34,6 +35,14 @@ install_dependencies() {
 }
 
 pushd "${REPO_DIR}" >/dev/null
+
+if [[ ! -d .git ]]; then
+  echo "No git repository found at ${REPO_DIR}."
+  echo "Set PRINTER_UI_SOURCE_DIR in /etc/default/printer-ui to your cloned repo path (for example: /home/pi/printer_ui)."
+  popd >/dev/null
+  exit 1
+fi
+
 git pull --ff-only
 
 if ! npm_is_healthy; then
