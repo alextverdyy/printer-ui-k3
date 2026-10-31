@@ -686,7 +686,7 @@ body {
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 22px;
+  top: 22px;
   min-width: 260px;
   max-width: 86vw;
   z-index: 2000;
@@ -698,6 +698,17 @@ body {
   display: grid;
   gap: 4px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+  opacity: 1;
+  transition: opacity 220ms ease;
+}
+
+.command-toast.visible {
+  opacity: 1;
+}
+
+.command-toast.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .command-toast strong {
