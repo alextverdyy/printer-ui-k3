@@ -6,21 +6,22 @@ export function CommandToast() {
   const [visible, setVisible] = useState(true);
 
   const latest = useMemo(() => commandQueue[0], [commandQueue]);
-  if (!latest) return null;
 
   useEffect(() => {
-    setVisible(true);
+    if (!latest) return;
 
-    if (latest.status !== 'success') return;
+    setVisible(true);
 
     const timer = window.setTimeout(() => {
       setVisible(false);
-    }, 2000);
+    }, 3000);
 
     return () => {
       window.clearTimeout(timer);
     };
-  }, [latest.id, latest.status]);
+  }, [latest]);
+
+  if (!latest) return null;
 
   return (
     <div className={`command-toast ${latest.status} ${visible ? 'visible' : 'hidden'}`}>

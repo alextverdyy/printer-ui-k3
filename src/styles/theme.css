@@ -685,7 +685,7 @@ body {
 .command-toast {
   position: fixed;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -14px);
   top: 22px;
   min-width: 260px;
   max-width: 86vw;
@@ -698,16 +698,18 @@ body {
   display: grid;
   gap: 4px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
-  opacity: 1;
-  transition: opacity 220ms ease;
+  opacity: 0;
+  transition: opacity 260ms ease, transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .command-toast.visible {
   opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .command-toast.hidden {
   opacity: 0;
+  transform: translate(-50%, -8px);
   pointer-events: none;
 }
 
