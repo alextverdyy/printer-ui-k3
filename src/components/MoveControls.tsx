@@ -55,7 +55,7 @@ export function MoveControls() {
       </section>
 
       <section className="card">
-        <div className="card-label">Homing</div>
+        <div className="card-title">Homing</div>
         <div className="btn-row">
           <button type="button" className="btn accent with-icon" onClick={() => runAction('Home All', () => commands.home('xyz'))}>
             <img className="button-icon" src={homeIcon} alt="" aria-hidden="true" />
@@ -73,7 +73,7 @@ export function MoveControls() {
       </section>
 
       <section className="card">
-        <div className="card-label">Axis Controls</div>
+        <div className="card-title">Axis Controls</div>
         <div className="btn-row four">
           {distanceOptions.map((distance) => (
             <button
@@ -118,8 +118,7 @@ export function MoveControls() {
       </section>
 
       <section className="card">
-        <div className="card-label">Cooling</div>
-        <div className="card-title">Fan Speeds</div>
+        <div className="card-title">Cooling</div>
         <div className="kv"><span>Part Fan</span><strong>{fanPartPercent}%</strong></div>
         <div className="btn-row">
           <button type="button" className="btn" onClick={() => runAction('Part fan -10%', () => commands.setFan(fanPartPercent - 10, 'fan'))}>-10%</button>

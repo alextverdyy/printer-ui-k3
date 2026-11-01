@@ -17,9 +17,9 @@ export function ExtrudeScreen() {
   const extrusionMacros = macros.filter((name) => /filament|purge|extrude|load|unload/i.test(name)).slice(0, 5);
 
   return (
-    <Layout title="Extrude" subtitle="Load, Unload, Purge">
+    <Layout title="Extrude" subtitle=" ">
       <section className="card">
-        <div className="card-label">Extruder</div>
+        <div className="card-title">Extruder</div>
         <div className="ex-temp">
           <div>
             <div className="ex-temp-value">{temperatures.nozzle.current.toFixed(1)}°C</div>
@@ -52,7 +52,6 @@ export function ExtrudeScreen() {
       </section>
 
       <section className="card">
-        <div className="card-label">Automation</div>
         <div className="card-title">Macros</div>
         {extrusionMacros.map((macro) => (
           <button

@@ -16,7 +16,7 @@ export function ConnectivityScreen() {
   const ethernet = connection.networkInterfaces.find((entry) => entry.type === 'ethernet');
 
   return (
-    <Layout title="Connectivity" subtitle="Moonraker + Network">
+    <Layout title="Connectivity" subtitle=" ">
       <section className="status-row">
         <article className="status-chip"><div className="k">Moonraker</div><div className={`v ${connectionState === 'online' ? 'status-ok' : ''}`}>{connectionState === 'online' ? 'Online' : 'Offline'}</div></article>
         <article className="status-chip"><div className="k">Wi-Fi</div><div className={`v ${wifi?.isUp ? 'status-ok' : ''}`}>{wifi?.isUp ? 'Connected' : 'Inactive'}</div></article>
@@ -56,7 +56,6 @@ export function ConnectivityScreen() {
       </section>
 
       <section className="card">
-        <div className="card-label">Wireless</div>
         <div className="card-title">Wi-Fi</div>
         <div className="kv"><span>SSID</span><strong>{wifi?.ssid || '-'}</strong></div>
         <div className="kv"><span>Signal</span><strong>{typeof wifi?.signalDbm === 'number' ? `${wifi.signalDbm} dBm` : '-'}</strong></div>
@@ -66,13 +65,6 @@ export function ConnectivityScreen() {
 
       <WifiNetworks onConnected={() => boot()} />
 
-      <section className="card">
-        <div className="card-label">Wired</div>
-        <div className="card-title">Ethernet</div>
-        <div className="kv"><span>Link</span><strong>{ethernet?.isUp ? 'Connected' : 'Disconnected'}</strong></div>
-        <div className="kv"><span>IP Address</span><strong>{ethernet?.ipAddresses[0] || '-'}</strong></div>
-        <div className="kv"><span>Gateway</span><strong>{ethernet?.gateway || '-'}</strong></div>
-      </section>
 
     </Layout>
   );

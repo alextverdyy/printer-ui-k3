@@ -93,8 +93,7 @@ export function PresetsCard() {
 
   return (
     <section className="card">
-      <div className="card-label">Material Presets</div>
-      <div className="card-title">Presets</div>
+      <div className="card-title">Temp Presets</div>
       {presets.map((preset) => (
         <div className="preset-row" key={preset.id}>
           <button type="button" className="macro-item button-reset" onClick={() => apply(preset)}>

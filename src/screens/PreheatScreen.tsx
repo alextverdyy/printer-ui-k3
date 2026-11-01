@@ -91,7 +91,7 @@ export function PreheatScreen() {
   ]);
 
   return (
-    <Layout title="Preheat" subtitle="Nozzle + Bed + Chamber">
+    <Layout title="Preheat" subtitle=" ">
       <section className="status-row">
         <article className="status-chip"><div className="k">Nozzle</div><div className="v">{Math.round(temperatures.nozzle.current)}/{Math.round(temperatures.nozzle.target)}</div></article>
         <article className="status-chip"><div className="k">Bed</div><div className="v">{Math.round(temperatures.bed.current)}/{Math.round(temperatures.bed.target)}</div></article>
@@ -99,8 +99,8 @@ export function PreheatScreen() {
       </section>
 
       <section className="card">
-        <div className="card-label">Set Targets</div>
-        <div className="card-title">Temperature Setpoints</div>
+  
+        <div className="card-title">Set Temperature<br></br></div>
 
         <button type="button" className="kv temp-target-row button-reset" onClick={() => keypad.open('extruder')}><span>Nozzle</span><strong>{Math.round(temperatures.nozzle.current)} / {Math.round(temperatures.nozzle.target)}°C</strong></button>
         <div className="btn-row">
@@ -127,8 +127,8 @@ export function PreheatScreen() {
       </section>
 
       <section className="card">
-        <div className="card-label">Live Monitoring</div>
-        <div className="card-title">All Temperatures</div>
+ 
+        <div className="card-title">Temp Graph</div>
 
         <div className="temp-legend">
           <span><i className="dot nozzle"></i>Nozzle</span>
@@ -175,7 +175,6 @@ export function PreheatScreen() {
       <PresetsCard />
 
       <section className="card">
-        <div className="card-label">Sensor Health</div>
         <div className="card-title">Sensors</div>
         {sensorEntries.map(([name, values]) => (
           <div className="kv" key={name}><span>{name}</span><strong>{Math.round(values.current)} / {Math.round(values.target)}°C</strong></div>
