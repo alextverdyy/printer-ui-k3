@@ -16,6 +16,7 @@ export function ControlScreen() {
       <MoveControls />
 
       <section className="card">
+        <div className="card-label">One-tap Macros</div>
         <div className="card-title">Macros</div>
         {macros.slice(0, 5).map((macro) => (
           <button

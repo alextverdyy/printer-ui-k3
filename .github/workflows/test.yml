@@ -14,11 +14,32 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run tests
         run: npm test
+
+      - name: Production build
+        run: npm run build
+
+      - name: Install test browser
+        run: npx playwright install --with-deps chromium
+
+      - name: Isolated touchscreen interaction tests
+        run: npm run test:browser
+
+      - name: Upload kiosk build
+        uses: actions/upload-artifact@v4
+        with:
+          name: k3-touchscreen-web
+          path: |
+            dist/
+            server/
+            scripts/
+            deploy/
+            package.json
+            README.md

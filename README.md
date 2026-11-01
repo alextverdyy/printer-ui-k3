@@ -1,3 +1,41 @@
+# K3 Touchscreen — reference edition
+
+Based on [tdunl410/printer-ui-klipper](https://github.com/tdunl410/printer-ui-klipper), following the original K3 portrait screenshots. This is the React/Moonraker kiosk interface, separate from the earlier native HelixScreen experiment.
+
+The home screen keeps the K3 render, temperature chips, large Print button and quick actions. Control keeps the circular XY jog pad, homing, Z movement, fans and macros. Four labeled navigation tabs remain visible. The header and navigation reserve their own space, so controls scroll between them without being covered.
+
+Settings → Screen appearance adds a custom accent, 100/110/120% text size, reset, and JSON import/export. The four existing themes remain. Appearance is stored in this browser; exports contain no Moonraker addresses or credentials. Firmware and printer commands use the original Moonraker transport.
+
+![Home](docs/screenshots/k3-home.png)
+![Control](docs/screenshots/k3-control.png)
+
+## Run locally
+
+Use Node.js 20.19+ or 22.12+:
+
+```sh
+npm ci
+npm run dev -- --host 127.0.0.1
+```
+
+For a production build: `npm run build`, then `npm run start:kiosk-server`. Connect to Moonraker from Settings → Connectivity. Offline screens show zero readings; these are not live telemetry.
+
+## Install on the printer host
+
+```sh
+git clone https://github.com/alextverdyy/printer-ui-k3.git
+cd printer-ui-k3
+./scripts/install-printer-ui.sh
+```
+
+The inherited installer configures the static server and Chromium kiosk services; it requires sudo on your printer host. Set the Waveshare display to portrait in the host's display configuration. Native 400×1280 is the primary target; shorter portrait displays scroll. Exact HDMI/DSI boot settings depend on the panel model.
+
+Browser checks cover 400×1280 and 480×800, navigation, text scaling, local appearance persistence, import/export validation, and emergency confirmation. Production build and unit tests pass. A physical Waveshare screen and a live Klipper printer have not been tested here.
+
+---
+
+## Upstream documentation
+
 # Klipper Portrait Touch UI
 Klipper ui designed for my annex k3 with a vertical waveshare 7.9" touchscreen
 

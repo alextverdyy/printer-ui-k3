@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-01T23:52:05.146011+00:00",
+  "title": "Design System: K3 portrait touchscreen",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Accent",
+        "tonalRamp": [
+          "oklch(15.00% 0.24690 287.91)",
+          "oklch(26.43% 0.24690 287.91)",
+          "oklch(37.86% 0.24690 287.91)",
+          "oklch(49.29% 0.24690 287.91)",
+          "oklch(60.71% 0.24690 287.91)",
+          "oklch(72.14% 0.24690 287.91)",
+          "oklch(83.57% 0.24690 287.91)",
+          "oklch(95.00% 0.24690 287.91)"
+        ]
+      },
+      "accent-2": {
+        "role": "primary",
+        "displayName": "Accent 2",
+        "tonalRamp": [
+          "oklch(15.00% 0.19126 291.75)",
+          "oklch(26.43% 0.19126 291.75)",
+          "oklch(37.86% 0.19126 291.75)",
+          "oklch(49.29% 0.19126 291.75)",
+          "oklch(60.71% 0.19126 291.75)",
+          "oklch(72.14% 0.19126 291.75)",
+          "oklch(83.57% 0.19126 291.75)",
+          "oklch(95.00% 0.19126 291.75)"
+        ]
+      },
+      "accent-text": {
+        "role": "primary",
+        "displayName": "Accent Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.07096 296.58)",
+          "oklch(26.43% 0.07096 296.58)",
+          "oklch(37.86% 0.07096 296.58)",
+          "oklch(49.29% 0.07096 296.58)",
+          "oklch(60.71% 0.07096 296.58)",
+          "oklch(72.14% 0.07096 296.58)",
+          "oklch(83.57% 0.07096 296.58)",
+          "oklch(95.00% 0.07096 296.58)"
+        ]
+      },
+      "bg": {
+        "role": "neutral",
+        "displayName": "Bg",
+        "tonalRamp": [
+          "oklch(15.00% 0.01318 270.46)",
+          "oklch(26.43% 0.01318 270.46)",
+          "oklch(37.86% 0.01318 270.46)",
+          "oklch(49.29% 0.01318 270.46)",
+          "oklch(60.71% 0.01318 270.46)",
+          "oklch(72.14% 0.01318 270.46)",
+          "oklch(83.57% 0.01318 270.46)",
+          "oklch(95.00% 0.01318 270.46)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "tonalRamp": [
+          "oklch(15.00% 0.01647 268.88)",
+          "oklch(26.43% 0.01647 268.88)",
+          "oklch(37.86% 0.01647 268.88)",
+          "oklch(49.29% 0.01647 268.88)",
+          "oklch(60.71% 0.01647 268.88)",
+          "oklch(72.14% 0.01647 268.88)",
+          "oklch(83.57% 0.01647 268.88)",
+          "oklch(95.00% 0.01647 268.88)"
+        ]
+      },
+      "surface-soft": {
+        "role": "neutral",
+        "displayName": "Surface Soft",
+        "tonalRamp": [
+          "oklch(15.00% 0.01823 266.22)",
+          "oklch(26.43% 0.01823 266.22)",
+          "oklch(37.86% 0.01823 266.22)",
+          "oklch(49.29% 0.01823 266.22)",
+          "oklch(60.71% 0.01823 266.22)",
+          "oklch(72.14% 0.01823 266.22)",
+          "oklch(83.57% 0.01823 266.22)",
+          "oklch(95.00% 0.01823 266.22)"
+        ]
+      },
+      "surface-strong": {
+        "role": "neutral",
+        "displayName": "Surface Strong",
+        "tonalRamp": [
+          "oklch(15.00% 0.02340 267.18)",
+          "oklch(26.43% 0.02340 267.18)",
+          "oklch(37.86% 0.02340 267.18)",
+          "oklch(49.29% 0.02340 267.18)",
+          "oklch(60.71% 0.02340 267.18)",
+          "oklch(72.14% 0.02340 267.18)",
+          "oklch(83.57% 0.02340 267.18)",
+          "oklch(95.00% 0.02340 267.18)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Border",
+        "tonalRamp": [
+          "oklch(15.00% 0.02498 262.76)",
+          "oklch(26.43% 0.02498 262.76)",
+          "oklch(37.86% 0.02498 262.76)",
+          "oklch(49.29% 0.02498 262.76)",
+          "oklch(60.71% 0.02498 262.76)",
+          "oklch(72.14% 0.02498 262.76)",
+          "oklch(83.57% 0.02498 262.76)",
+          "oklch(95.00% 0.02498 262.76)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Text",
+        "tonalRamp": [
+          "oklch(15.00% 0.00993 267.36)",
+          "oklch(26.43% 0.00993 267.36)",
+          "oklch(37.86% 0.00993 267.36)",
+          "oklch(49.29% 0.00993 267.36)",
+          "oklch(60.71% 0.00993 267.36)",
+          "oklch(72.14% 0.00993 267.36)",
+          "oklch(83.57% 0.00993 267.36)",
+          "oklch(95.00% 0.00993 267.36)"
+        ]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Text Muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.02990 263.38)",
+          "oklch(26.43% 0.02990 263.38)",
+          "oklch(37.86% 0.02990 263.38)",
+          "oklch(49.29% 0.02990 263.38)",
+          "oklch(60.71% 0.02990 263.38)",
+          "oklch(72.14% 0.02990 263.38)",
+          "oklch(83.57% 0.02990 263.38)",
+          "oklch(95.00% 0.02990 263.38)"
+        ]
+      },
+      "success": {
+        "role": "semantic",
+        "displayName": "Success",
+        "tonalRamp": [
+          "oklch(15.00% 0.20252 150.02)",
+          "oklch(26.43% 0.20252 150.02)",
+          "oklch(37.86% 0.20252 150.02)",
+          "oklch(49.29% 0.20252 150.02)",
+          "oklch(60.71% 0.20252 150.02)",
+          "oklch(72.14% 0.20252 150.02)",
+          "oklch(83.57% 0.20252 150.02)",
+          "oklch(95.00% 0.20252 150.02)"
+        ]
+      },
+      "warning": {
+        "role": "semantic",
+        "displayName": "Warning",
+        "tonalRamp": [
+          "oklch(15.00% 0.15375 76.94)",
+          "oklch(26.43% 0.15375 76.94)",
+          "oklch(37.86% 0.15375 76.94)",
+          "oklch(49.29% 0.15375 76.94)",
+          "oklch(60.71% 0.15375 76.94)",
+          "oklch(72.14% 0.15375 76.94)",
+          "oklch(83.57% 0.15375 76.94)",
+          "oklch(95.00% 0.15375 76.94)"
+        ]
+      },
+      "danger": {
+        "role": "semantic",
+        "displayName": "Danger",
+        "tonalRamp": [
+          "oklch(15.00% 0.17994 17.60)",
+          "oklch(26.43% 0.17994 17.60)",
+          "oklch(37.86% 0.17994 17.60)",
+          "oklch(49.29% 0.17994 17.60)",
+          "oklch(60.71% 0.17994 17.60)",
+          "oklch(72.14% 0.17994 17.60)",
+          "oklch(83.57% 0.17994 17.60)",
+          "oklch(95.00% 0.17994 17.60)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "title": {
+        "displayName": "Printer title",
+        "purpose": "Top-level panel heading."
+      },
+      "card-title": {
+        "displayName": "Card title",
+        "purpose": "Operational group headings."
+      },
+      "body": {
+        "displayName": "Body and controls",
+        "purpose": "Shared labels and controls scaled by the local text preference."
+      },
+      "label": {
+        "displayName": "Section label",
+        "purpose": "Compact uppercase operational grouping."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card",
+        "value": "0 8px 18px rgba(0, 0, 0, 0.28)",
+        "purpose": "Dark grouped surfaces."
+      },
+      {
+        "name": "hero",
+        "value": "0 10px 22px rgba(0, 0, 0, 0.38)",
+        "purpose": "Printer render container."
+      },
+      {
+        "name": "dock",
+        "value": "0 -8px 24px rgba(8, 10, 16, 0.42)",
+        "purpose": "Persistent bottom navigation."
+      },
+      {
+        "name": "dialog",
+        "value": "0 10px 30px rgba(0, 0, 0, 0.42)",
+        "purpose": "Modal confirmation surface."
+      }
+    ],
+    "motion": [
+      {
+        "name": "toast-opacity",
+        "value": "opacity 260ms ease",
+        "purpose": "Toast visibility."
+      },
+      {
+        "name": "toast-transform",
+        "value": "transform 320ms cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Toast position feedback."
+      },
+      {
+        "name": "progress",
+        "value": "width 0.6s ease",
+        "purpose": "Print progress changes."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "Existing reduced-motion animation and transition duration override."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-height",
+        "value": "(max-height: 850px)"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Print action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Prominent full-width Print action with keyboard-focus feedback and a contrast-derived custom-accent foreground.",
+      "html": "<button class=\"ds-primary\">Print</button>",
+      "css": ".ds-primary{font-family:-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"Inter\",sans-serif;background:var(--accent,#7b4dff);color:var(--accent-foreground,#fff);border:0;border-radius:18px;padding:20px 16px;min-height:86px;font-size:34px;font-weight:600;cursor:pointer;}.ds-primary:focus-visible{outline:2px solid var(--accent-2,#9a79ff);outline-offset:3px}"
+    },
+    {
+      "name": "Standard button",
+      "kind": "button",
+      "refersTo": "button-default",
+      "description": "Existing touch action; pressed and keyboard-focus feedback without decorative hover movement.",
+      "html": "<button class=\"ds-button\">Disable Motors</button>",
+      "css": ".ds-button{font-family:-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"Inter\",sans-serif;background:var(--surface-strong,#232834);color:var(--text,#eceff6);border:0;border-radius:16px;padding:12px 10px;min-height:56px;font-size:16px;font-weight:600;cursor:pointer;}.ds-button:active{background:color-mix(in srgb,var(--accent,#7b4dff) 40%,var(--surface-strong,#232834));color:var(--accent-pressed-foreground,var(--text,#eceff6));}.ds-button:focus-visible{outline:2px solid var(--accent-2,#9a79ff);outline-offset:3px}"
+    },
+    {
+      "name": "Selected button",
+      "kind": "button",
+      "refersTo": "button-selected",
+      "description": "Existing touch action; pressed and keyboard-focus feedback without decorative hover movement.",
+      "html": "<button class=\"ds-selected\">10mm</button>",
+      "css": ".ds-selected{font-family:-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"Inter\",sans-serif;background:color-mix(in srgb,var(--accent,#7b4dff) 30%,var(--surface-strong,#232834));color:var(--accent-text,#d9ccff);border:0;border-radius:16px;padding:12px 10px;min-height:56px;font-size:16px;font-weight:600;cursor:pointer;}.ds-selected:active{background:color-mix(in srgb,var(--accent,#7b4dff) 40%,var(--surface-strong,#232834));color:var(--accent-pressed-foreground,var(--text,#eceff6));}.ds-selected:focus-visible{outline:2px solid var(--accent-2,#9a79ff);outline-offset:3px}"
+    },
+    {
+      "name": "Inset field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Near-black field with a fine border and visible focus.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-value\">Printer name</label><input class=\"ds-input\" id=\"ds-value\" value=\"K3\" />",
+      "css": ".ds-field-label{font-family:-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"Inter\",sans-serif;display:block;color:var(--text-muted,#9aa4b7);font-size:12px;font-weight:650;margin:6px 0;}.ds-input{font-family:-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"Inter\",sans-serif;width:100%;min-height:44px;border:1px solid var(--border,#2f3643);border-radius:12px;background:#11151d;color:var(--text,#eceff6);padding:10px 12px;font-size:16px;}.ds-input:focus-visible{outline:2px solid var(--accent-2,#9a79ff);outline-offset:3px}"
+    },
+    {
+      "name": "Temperature target",
+      "kind": "chip",
+      "refersTo": "temperature-chip",
+      "description": "A touchable temperature pill shown over the printer hero.",
+      "html": "<button class=\"ds-temperature\">Nozzle <span>200\u00b0 / 210\u00b0</span></button>",
+      "css": ".ds-temperature{font-family:-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"Inter\",sans-serif;display:inline-flex;align-items:center;gap:8px;min-height:44px;background:rgba(12,14,20,.86);border:1px solid var(--border,#2f3643);border-radius:999px;padding:10px 12px;color:var(--text,#eceff6);font-size:16px;}.ds-temperature span{color:var(--text-muted,#9aa4b7);}.ds-temperature:focus-visible{outline:2px solid var(--accent-2,#9a79ff);outline-offset:3px}"
+    },
+    {
+      "name": "Operation card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Dark grouped operations with a muted section label.",
+      "html": "<section class=\"ds-card\"><div class=\"ds-card-label\">Cooling</div><div class=\"ds-card-title\">Fan Speeds</div><div>Part Fan <strong>0%</strong></div></section>",
+      "css": ".ds-card{font-family:-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"Inter\",sans-serif;background:var(--surface,#161921);color:var(--text,#eceff6);border:1px solid var(--border,#2f3643);border-radius:20px;padding:14px;box-shadow:0 8px 18px rgba(0,0,0,.28);}.ds-card-label{color:var(--text-muted,#9aa4b7);font-size:12px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;}.ds-card-title{font-size:20px;font-weight:650;margin-bottom:10px;}"
+    },
+    {
+      "name": "Four-tab dock",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Permanent icon-and-text navigation; compact variant follows the short-height breakpoint.",
+      "html": "<nav class=\"ds-dock\" aria-label=\"Main navigation\"><a href=\"#\" aria-current=\"page\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 10 12 3l9 7v11h-6v-7H9v7H3Z\" /></svg><span>Home</span></a><a href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 8V3h12v5M6 17H3V8h18v9h-3M6 14h12v7H6Z\" /></svg><span>Print</span></a><a href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 3v18M3 12h18M8 7l4-4 4 4M8 17l4 4 4-4\" /></svg><span>Control</span></a><a href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6 2.1-2.1M16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z\" /></svg><span>Settings</span></a></nav>",
+      "css": ".ds-dock{font-family:-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"Inter\",sans-serif;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:16px 12px;border:1px solid var(--border,#2f3643);border-radius:24px;background:rgba(14,17,24,.96);box-shadow:0 -8px 24px rgba(8,10,16,.42);}.ds-dock a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-width:0;min-height:92px;padding:10px 4px;border-radius:14px;text-decoration:none;color:var(--text-muted,#9aa4b7);font-size:13px;font-weight:600;}.ds-dock svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;}.ds-dock a[aria-current]{color:#fff;background:rgba(var(--accent-rgb,123,77,255),.24);border:1px solid rgba(var(--accent-rgb,123,77,255),.35);}.ds-dock a:focus-visible{outline:2px solid var(--accent-2,#9a79ff);outline-offset:3px}@media(max-height:850px){.ds-dock{padding:8px;gap:4px}.ds-dock a{min-height:60px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The K3 portrait control panel",
+    "overview": "The user's two supplied screenshots and the upstream tdunl410/printer-ui-klipper interface define this visual system. Charcoal surfaces, violet actions and the K3 printer render establish the identity. This is an extension of that interface; HelixScreen's native dashboard was explicitly rejected.\n\nThe panel is dense enough for printer operation, with generous touch controls, clear telemetry and a permanent labeled navigation dock. Appearance changes stay within the existing visual structure. The reference composition is the authority; the metaphor below is descriptive shorthand.",
+    "keyCharacteristics": [
+      "Charcoal layers with violet selected actions.",
+      "A prominent printer render, temperature chips and Print action.",
+      "Circular XY motion controls beside separate Z buttons.",
+      "Four permanent icon-and-text navigation tabs."
+    ],
+    "rules": [
+      {
+        "name": "The Reference Palette Rule",
+        "body": "Preserve charcoal surfaces and the existing theme system when adding controls; customization changes accent treatment within this structure.",
+        "section": "colors"
+      },
+      {
+        "name": "The Reserved Navigation Rule",
+        "body": "Content must scroll above the dock rather than disappear beneath it; preserve reserved flex space at every supported text size.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "**Do** preserve the supplied K3 screenshots and existing printer render as the visual authority.",
+      "**Do** keep the header and all four labeled tabs reachable while the middle scrolls.",
+      "**Do** retain the prominent Print action, quick-action rows, radial XY jog and separate Z buttons.",
+      "**Do** verify custom accents, largest text and short portrait viewports when changing shared controls.",
+      "**Do** keep appearance imports restricted to the versioned accent and text-size profile."
+    ],
+    "donts": [
+      "**Don't** substitute the rejected native HelixScreen dashboard or an icon-only grid.",
+      "**Don't** shrink the entire interface to fit a shorter viewport; allow the middle to scroll.",
+      "**Don't** treat disconnected readings as live printer telemetry.",
+      "**Don't** mix printer credentials, machine state or printer configuration into appearance exports."
+    ]
+  }
+}

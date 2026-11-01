@@ -20,6 +20,10 @@ AUTO_INSTALL_KIOSK_DEPS="${AUTO_INSTALL_KIOSK_DEPS:-1}"
 
 echo "Installing Printer UI from ${REPO_DIR}"
 
+node_toolchain_supported() {
+  node -e 'const [m,n]=process.versions.node.split(".").map(Number); process.exit((m===20 && n>=19)||(m===22 && n>=12)||m>22 ? 0 : 1)'
+}
+
 node_major_version() {
   node -p "process.versions.node.split('.')[0]" 2>/dev/null || echo "0"
 }
@@ -136,10 +140,10 @@ ensure_node_20() {
   if [[ "${has_node}" -eq 1 ]]; then
     local current_major
     current_major="$(node_major_version)"
-    if [[ "${current_major}" -ge 20 ]]; then
+    if node_toolchain_supported; then
       return 0
     fi
-    echo "Detected Node.js ${current_major}.x, but 20+ is required."
+    echo "Detected Node.js ${current_major}.x, but 20.19+ or 22.12+ is required."
   else
     if command -v node >/dev/null 2>&1; then
       echo "Node.js exists, but npm is missing or broken. Repairing Node toolchain..."
@@ -149,7 +153,7 @@ ensure_node_20() {
   fi
 
   if [[ "${AUTO_INSTALL_NODE}" != "1" ]]; then
-    echo "Node.js 20+ is required. Install it manually, or re-run with AUTO_INSTALL_NODE=1." >&2
+    echo "Node.js 20.19+ or 22.12+ is required. Install it manually, or re-run with AUTO_INSTALL_NODE=1." >&2
     exit 1
   fi
 
@@ -168,7 +172,7 @@ ensure_node_20() {
   fi
 
   if [[ "${installed}" -eq 0 ]]; then
-    echo "Automatic Node install failed. Install Node.js 20+ manually and re-run this installer." >&2
+    echo "Automatic Node install failed. Install Node.js 20.19+ or 22.12+ manually and re-run this installer." >&2
     exit 1
   fi
 
@@ -179,8 +183,8 @@ ensure_node_20() {
 
   local new_major
   new_major="$(node_major_version)"
-  if [[ "${new_major}" -lt 20 ]]; then
-    echo "Installed Node.js ${new_major}.x, but 20+ is required." >&2
+  if ! node_toolchain_supported; then
+    echo "Installed Node.js ${new_major}.x, but 20.19+ or 22.12+ is required." >&2
     exit 1
   fi
 }

@@ -32,7 +32,7 @@ export function Layout({ title, subtitle, children, homeAction }: LayoutProps) {
       <header className="header">
         <div>
           <div className="printer-title">{title}</div>
-          <div className="subline">{subtitle}</div>
+          {subtitle.trim() ? <div className="subline">{subtitle}</div> : null}
         </div>
         {homeAction ? (
           <Link to="/" className="icon-btn">
@@ -47,9 +47,9 @@ export function Layout({ title, subtitle, children, homeAction }: LayoutProps) {
         )}
       </header>
 
-      {children}
+      <div className="screen-content" key={title}>{children}</div>
 
-      <nav className="dock">
+      <nav className="dock" aria-label="Main navigation">
         <NavLink to="/" className={({ isActive }: { isActive: boolean }) => (isActive ? 'active' : '')} end>
           <img className="dock-icon" src={homeIcon} alt="" aria-hidden="true" />
           <span className="dock-label">Home</span>

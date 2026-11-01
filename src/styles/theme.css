@@ -349,6 +349,7 @@ body {
 }
 
 .btn:active:not(:disabled) {
+  color: var(--accent-pressed-foreground, var(--text));
   background: color-mix(in srgb, var(--accent) 40%, var(--surface-strong));
 }
 
@@ -1186,3 +1187,50 @@ body {
 .ex-seg button { min-height: 52px; background: var(--surface-strong); color: inherit; border: 0; font: inherit; font-weight: 600; font-size: 17px; }
 .ex-seg button + button { border-left: 2px solid var(--surface); }
 .ex-seg button.active { background: var(--accent); color: #fff; }
+
+/* K3: preserve the supplied 400×1280 composition and use the actual panel size. */
+:root { --ui-text-scale: 1; --accent-foreground: #fff; }
+#root { width: 100%; display: flex; justify-content: center; align-items: center; }
+.device { width: 100%; max-width: 480px; height: 100dvh; max-height: 1480px; }
+.screen { padding: 0; gap: 0; overflow: hidden; }
+.header { flex: 0 0 auto; padding: 16px 14px 12px; gap: 12px; }
+.header > div { min-width: 0; }
+.printer-title { overflow-wrap: anywhere; font-size: calc(28px * var(--ui-text-scale)); }
+.screen-content { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: var(--gap); padding: 0 14px 166px; overflow-y: auto; overflow-x: hidden; scrollbar-width: thin; scrollbar-color: var(--border) transparent; overscroll-behavior: contain; }
+.screen-content > * { flex-shrink: 0; }
+.dock { position: absolute; left: 14px; right: 14px; bottom: max(18px, env(safe-area-inset-bottom)); transform: none; width: auto; max-width: none; }
+.dock a { min-width: 0; padding-inline: 4px; }
+.card-label { margin-bottom: 6px; }
+.btn, .action-link, .macro-item, .kv, .subline, .input { font-size: calc(16px * var(--ui-text-scale)); }
+.card-title { font-size: calc(20px * var(--ui-text-scale)); }
+.card-label { font-size: calc(12px * var(--ui-text-scale)); }
+.dock-label { font-size: calc(13px * var(--ui-text-scale)); }
+.primary { color: var(--accent-foreground); }
+.status-chip, .stat { min-width: 0; overflow-wrap: anywhere; }
+.temp-pill { min-height: 44px; }
+:where(button, a, input, select, [role='button']):focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; }
+.jog-segment:focus-visible path, .jog-home:focus-visible circle { stroke: var(--accent-2); stroke-width: 3; }
+button, a, [role='button'] { touch-action: manipulation; }
+button:disabled { cursor: not-allowed; }
+.appearance-controls { display: grid; gap: 16px; }
+.appearance-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.appearance-row input[type='color'] { width: 64px; height: 48px; padding: 4px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface-strong); }
+.appearance-size { margin: 0; padding: 0; border: 0; min-width: 0; }
+.appearance-size legend { padding: 0; margin-bottom: 10px; }
+.appearance-note { margin: 0; color: var(--text-muted); font-size: 14px; line-height: 1.5; }
+.appearance-reset { width: 100%; }
+@media (max-height: 850px) {
+  .dock { min-height: 80px; padding: 8px; bottom: 8px; gap: 4px; }
+  .dock a { min-height: 60px; }
+  .screen-content { padding-bottom: 110px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+/* Reserve the dock's space so no control can sit beneath navigation. */
+.screen-content { padding-bottom: 12px; scroll-padding-block: 12px; }
+.dock { position: static; flex: 0 0 auto; margin: 12px 14px max(18px, env(safe-area-inset-bottom)); }
+@media (max-height: 850px) {
+  .dock { margin: 8px 14px max(8px, env(safe-area-inset-bottom)); }
+  .screen-content { padding-bottom: 12px; }
+}

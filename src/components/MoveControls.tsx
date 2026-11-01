@@ -55,7 +55,7 @@ export function MoveControls() {
       </section>
 
       <section className="card">
-        <div className="card-title">Homing</div>
+        <div className="card-label">Homing</div>
         <div className="btn-row">
           <button type="button" className="btn accent with-icon" onClick={() => runAction('Home All', () => commands.home('xyz'))}>
             <img className="button-icon" src={homeIcon} alt="" aria-hidden="true" />
@@ -73,12 +73,13 @@ export function MoveControls() {
       </section>
 
       <section className="card">
-        <div className="card-title">Axis Controls</div>
+        <div className="card-label">Axis Controls</div>
         <div className="btn-row four">
           {distanceOptions.map((distance) => (
             <button
               key={distance}
               type="button"
+              aria-pressed={moveDistance === distance}
               className={`btn ${moveDistance === distance ? 'accent' : ''}`}
               onClick={() => setMoveDistance(distance)}
             >
@@ -97,13 +98,14 @@ export function MoveControls() {
                 tabIndex={0}
                 aria-label={segment.label}
                 onClick={() => runAction(`Jog ${segment.label} ${moveDistance}mm`, () => commands.jog(segment.axis, segment.sign * moveDistance))}
+                onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); void runAction(`Jog ${segment.label} ${moveDistance}mm`, () => commands.jog(segment.axis, segment.sign * moveDistance)); } }}
               >
                 <path d={segment.path} />
                 <image href={segment.icon} x={segment.iconX - 11} y={segment.iconY - 11} width="22" height="22" />
               </g>
             ))}
             <circle className="jog-inner-ring" cx="100" cy="100" r="46" />
-            <g className="jog-home" role="button" tabIndex={0} aria-label="Home XY" onClick={() => runAction('Home XY', () => commands.home('xy'))}>
+            <g className="jog-home" role="button" tabIndex={0} aria-label="Home XY" onKeyDown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); void runAction('Home XY', () => commands.home('xy')); } }} onClick={() => runAction('Home XY', () => commands.home('xy'))}>
               <circle cx="100" cy="100" r="34" />
               <image href={homeIcon} x="86" y="86" width="28" height="28" />
             </g>
@@ -118,7 +120,8 @@ export function MoveControls() {
       </section>
 
       <section className="card">
-        <div className="card-title">Cooling</div>
+        <div className="card-label">Cooling</div>
+        <div className="card-title">Fan Speeds</div>
         <div className="kv"><span>Part Fan</span><strong>{fanPartPercent}%</strong></div>
         <div className="btn-row">
           <button type="button" className="btn" onClick={() => runAction('Part fan -10%', () => commands.setFan(fanPartPercent - 10, 'fan'))}>-10%</button>

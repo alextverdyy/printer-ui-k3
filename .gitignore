@@ -4,3 +4,7 @@ dist/
 *.tsbuildinfo
 vite.config.js
 vite.config.d.ts
+
+.impeccable/review/
+playwright-report/
+test-results/

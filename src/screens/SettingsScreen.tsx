@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AppearanceControls } from '../components/AppearanceControls';
+import { useAppearanceStore } from '../stores/useAppearanceStore';
 import { Dialog } from '../components/Dialog';
 import { Layout } from '../components/Layout';
 import { useCommands, usePrinterStore } from '../stores/usePrinterStore';
@@ -55,13 +57,23 @@ export function SettingsScreen() {
               key={option.key}
               type="button"
               className={`theme-chip button-reset ${theme === option.key ? 'selected' : ''}`}
-              onClick={() => setTheme(option.key)}
+              aria-pressed={theme === option.key}
+              onClick={() => {
+                const { appearance, setAppearance } = useAppearanceStore.getState();
+                setAppearance({ ...appearance, accent: null });
+                setTheme(option.key);
+              }}
             >
               <span className="swatch" style={{ background: option.swatch }}></span>
               {option.label}
             </button>
           ))}
         </div>
+      </section>
+
+      <section className="card">
+        <div className="card-title">Screen appearance</div>
+        <AppearanceControls />
       </section>
 
       <section className="card">

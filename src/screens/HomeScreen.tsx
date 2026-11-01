@@ -43,13 +43,13 @@ export function HomeScreen() {
 
       <div className="hero">
         <img src={printerRender} alt="Printer render" />
-        <button type="button" className="pill temp-pill" style={{ left: 16, top: 26 }} onClick={() => keypad.open('extruder')}>
+        <button type="button" aria-label="Set nozzle temperature" className="pill temp-pill" style={{ left: 16, top: 26 }} onClick={() => keypad.open('extruder')}>
           {Math.round(temperatures.nozzle.current)}°C <span className="target">/{Math.round(temperatures.nozzle.target)}°C</span>
         </button>
-        <button type="button" className="pill temp-pill" style={{ right: 16, bottom: 20 }} onClick={() => keypad.open('heater_bed')}>
+        <button type="button" aria-label="Set bed temperature" className="pill temp-pill" style={{ right: 16, bottom: 20 }} onClick={() => keypad.open('heater_bed')}>
           {Math.round(temperatures.bed.current)}°C <span className="target">/{Math.round(temperatures.bed.target)}°C</span>
         </button>
-        <button type="button" className="pill temp-pill" style={{ right: 16, top: 26 }} onClick={() => keypad.open('chamber')}>
+        <button type="button" aria-label="Set chamber temperature" className="pill temp-pill" style={{ right: 16, top: 26 }} onClick={() => keypad.open('chamber')}>
           {Math.round(temperatures.chamber.current)}°C <span className="target">/{Math.round(temperatures.chamber.target)}°C</span>
         </button>
       </div>
