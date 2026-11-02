@@ -1,3 +1,5 @@
+> **Superseded prototype:** the active implementation is native C++/LVGL HelixScreen at [alextverdyy/helixscreen-k3](https://github.com/alextverdyy/helixscreen-k3). This React kiosk is a visual reference only; the user requires a native touchscreen application.
+
 # K3 Touchscreen — reference edition
 
 Based on [tdunl410/printer-ui-klipper](https://github.com/tdunl410/printer-ui-klipper), following the original K3 portrait screenshots. This is the React/Moonraker kiosk interface, separate from the earlier native HelixScreen experiment.
